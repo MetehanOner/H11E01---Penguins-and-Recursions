@@ -20,7 +20,7 @@ public final class Solution {
     /**
      * Calculate the nth value of PenguTwinSequenceM.
      *
-     * @param n the element to calculate
+     * @param n the element to calculate (the value of things)
      * @return the result of the calculation
      */
     public static int penguTwinSeqM(int n) throws IllegalArgumentException {
