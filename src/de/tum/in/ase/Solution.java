@@ -60,7 +60,8 @@ public final class Solution {
             return 1;
         }
 
-        return a^3 * penguBigSeq(n - 1, a)^2;
+        return (long) (Math.pow(a, 3) * Math.pow(penguBigSeq(n - 1, a), 2));
+
     }
 
     /**
