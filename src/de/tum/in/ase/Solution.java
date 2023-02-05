@@ -13,8 +13,15 @@ public final class Solution {
      * @throws IllegalArgumentException when n is negative
      */
     public static int penguTwinSeqF(int n) throws IllegalArgumentException {
-        // TODO 1.1: Implement penguTwinSeqF
-        return 0;
+        // TODO 1.1: Implement penguTwinSeqF --- penguTwinSeqF(n) = n − penguTwinSeqM(penguTwinSeqF(n−1)) if n>0
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+        if (n <= 1) {
+            return 1;
+        }
+
+        return n - penguTwinSeqM(penguTwinSeqF(n - 1));
     }
 
     /**
@@ -24,8 +31,16 @@ public final class Solution {
      * @return the result of the calculation
      */
     public static int penguTwinSeqM(int n) throws IllegalArgumentException {
-        // TODO 1.1: Implement penguTwinSeqM
-        return 0;
+        // TODO 1.1: Implement penguTwinSeqM --- n − penguTwinSeqF(penguTwinSeqM(n − 1)) if n>0
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (n <= 1) {
+            return 0;
+        }
+
+        return n - penguTwinSeqF(penguTwinSeqM(n - 1));
     }
 
     /**
