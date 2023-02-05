@@ -79,7 +79,7 @@ public final class Solution {
         // TODO 1.3: Implement penguRecursiveSeq penguRecursiveSeq(n−1, p0, p1, p2) − penguRecursiveSeq(n−2, p0, p1, p2) +
         //  2⋅penguRecursiveSeq(n−3,p0,p1,p2)
         if (n < 0) {
-            return 2 * penguRecursiveSeq(- n, p0, p1, p2);
+            return 2 * penguRecursiveSeq(-n, p0, p1, p2);
         }
 
         if (0 == n) {
@@ -94,6 +94,6 @@ public final class Solution {
             return p2;
         }
 
-        return penguRecursiveSeq(n - 1, p0, p1, p2) - penguRecursiveSeq(n - 2, p0, p1, p2) + 2 * penguRecursiveSeq(n - 3,p0,p1,p2);
+        return penguRecursiveSeq(n - 1, p0, p1, p2) - penguRecursiveSeq(n - 2, p0, p1, p2) + 2 * penguRecursiveSeq(n - 3, p0, p1, p2);
     }
 }
