@@ -51,8 +51,16 @@ public final class Solution {
      * @return the result of the calculation
      */
     public static long penguBigSeq(long n, long a) throws IllegalArgumentException {
-        // TODO 1.2: Implement penguBigSeq
-        return 0;
+        // TODO 1.2: Implement penguBigSeq --- a^^3 × (penguBigSeq(n−1,a))^^2 if n>0
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (n < 1) {
+            return 1;
+        }
+
+        return a^3 * penguBigSeq(n - 1, a)^2;
     }
 
     /**
